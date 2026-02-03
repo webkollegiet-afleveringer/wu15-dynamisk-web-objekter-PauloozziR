@@ -46,9 +46,15 @@ students.forEach(function(student) {
     studentListDiv.append(studentDiv);
 });
 
-/* students.forEach(student => {
+// --- Opgave xtra ---
+students.forEach(student => {
     let studentDiv = document.createElement("div");
-    studentDiv.textContent = "Navn: ${student.name}, Alder: ${student.age}, Uddannelse: ${student.course}";
+    studentDiv.classList.add("student");
+    let studentHeadline = document.createElement("h2");
+    studentHeadline.textContent = "Navn: " + student.name;
+    let studentInfo = document.createElement("p");
+    studentInfo.textContent = `Alder: ${student.age}, Uddannelse: ${student.course}`;
+    studentDiv.append(studentHeadline, studentInfo);
     studentListDiv.appendChild(studentDiv);
-}); */
-console.log("Opgave 3", studentListDiv);
+});
+console.log("Opgave 3 og xtra", studentListDiv);
