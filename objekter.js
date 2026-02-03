@@ -51,7 +51,7 @@ students.forEach(student => {
     let studentDiv = document.createElement("div");
     studentDiv.classList.add("student");
     let studentHeadline = document.createElement("h2");
-    studentHeadline.textContent = "Navn: " + student.name;
+    studentHeadline.textContent = student.name;
     let studentInfo = document.createElement("p");
     studentInfo.textContent = `Alder: ${student.age}, Uddannelse: ${student.course}`;
     studentDiv.append(studentHeadline, studentInfo);
